@@ -91,7 +91,11 @@ The challenge description explicitly hints: _The right one is Linux!_. Based on 
 dd if=disko-2.dd of=partition1.img bs=512 skip=2048 count=51200
 ```
 
-**Explanation:** Extracting 51200 blocks starting from sector 2048
+**Explanation:** I used `dd` to carve out the partition based on the sector information retrieved from the `file` command:
+* `if/of`: Input File (`disko-2.dd`) and Output File (`partition1.img`)
+* `bs=512`: Sets the block size to 512 bytes
+* `skip=2048`: Skips the first 2048 sectors to reach the start of Partition 1
+* `count=51200`: Copies exactly 51200 sectors (the length of Partition 1)
 
 ### Step 4: Final Flag Recovery
 

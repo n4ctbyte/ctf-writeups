@@ -66,7 +66,7 @@ A static analysis was performed using `strings` to quickly identify potential fl
 strings flag.png | grep "pico"
 ```
 
-**Observation:** This method has no output means there are no human-readable string "pico".
+**Observation:** The lack of output indicates no human-readable 'pico' strings are present.
 
 ### Step 3: Exiftool Analysis
 
@@ -78,7 +78,7 @@ I examined the file metadata using `exiftool` to check for any comments or hidde
 exiftool flag.png | grep "pico"
 ```
 
-**Observation:** This method has no output means there is no metadata that has "pico".
+**Observation:** The lack of output indicates no relevant metadata contains the string "pico".
 
 ### Step 4: Binwalk
 

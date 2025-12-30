@@ -33,7 +33,7 @@ This section provides details regarding the initial evidence file.
 
 - **Filename:** `disko-2.dd`
 - **Size:** `100 MB`
-- **MD5:** `8e2301319026f48eeaedd835c468ace8`
+- **SHA-256:** `8e2301319026f48eeaedd835c468ace8`
 
 **Initial Check:**
 Verifying file type using signature headers (Magic Bytes).

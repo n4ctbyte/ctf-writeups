@@ -33,7 +33,7 @@ This section provides details regarding the initial evidence file.
 
 - **Filename:** `network-dump.flag.pcap`
 - **Size:** `778 Bytes`
-- **MD5:** `3739995ab317b36e9e441fc255be27bc`
+- **SHA-256:** `35d0bfae1a7c7decb32a081da30a1f46d94279a893149fbaf71e79c9378e9f91`
 
 **Initial Check:**
 Verifying file type using signature headers (Magic Bytes).

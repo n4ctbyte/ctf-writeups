@@ -33,7 +33,7 @@ This section provides details regarding the initial evidence file.
 
 - **Filename:** `flag.png`
 - **Size:** `42 KB`
-- **MD5:** `6acef229547ba88cdcc166e317ef4b96`
+- **SHA-256:** `44dd9d5711b44d0516f3d03a543e3b540473d802306de1715f0a261d0fb5772a`
 
 **Initial Check:**
 Verifying file type using signature headers (Magic Bytes).

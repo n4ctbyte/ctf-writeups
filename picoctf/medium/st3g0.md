@@ -33,7 +33,7 @@ This section provides details regarding the initial evidence file.
 
 - **Filename:** `pico.flag.png`
 - **Size:** `14 KB`
-- **MD5:** `045f95f60a03c1c89c6c3d0bf9baf8ab`
+- **SHA-256:** `20cd72c0c03a3174d5f3f800b08dad416c0bbf233b06ba4dcaa8d7e5467d3e11`
 
 **Initial Check:**
 Verifying file type using signature headers (Magic Bytes).

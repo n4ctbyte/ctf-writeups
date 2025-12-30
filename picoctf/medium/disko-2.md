@@ -1,12 +1,12 @@
 # [Disko-2]
 
-**CTF Name:** picoCTF
-**Category:** Forensics
-**Difficulty:** Medium
-**Hint:** How can you extract/isolate a partition?
-**Author:** Nakata Christian (n4ctbyte)
-**Date:** December 30, 2025
-**Source:** https://play.picoctf.org/practice/challenge/506?category=4&page=2
+* **CTF Name:** picoCTF
+* **Category:** Forensics
+* **Difficulty:** Medium
+* **Hint:** How can you extract/isolate a partition?
+* **Author:** Nakata Christian (n4ctbyte)
+* **Date:** December 30, 2025
+* **Source:** [Link to Challenge](https://play.picoctf.org/practice/challenge/506?category=4&page=2)
 
 ---
 

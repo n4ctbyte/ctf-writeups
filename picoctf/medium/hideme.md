@@ -4,7 +4,8 @@
 * **Category:** Forensics, Steganography
 * **Difficulty:** Medium
 * **Hint:** None
-* **Author:** Nakata Christian (n4ctbyte)
+* **Challenge Author:** GEOFFREY NJOGU
+* **Writeup Author:** Nakata Christian (n4ctbyte)
 * **Date:** December 30, 2025
 * **Source:** [Link to Challenge](https://play.picoctf.org/practice/challenge/350?category=4&page=3)
 

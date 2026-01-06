@@ -6,7 +6,8 @@
 * **Hint:**
     * 1: Wait, you can hide files inside files? But how do you find them?
     * 2: Make sure to submit the flag as picoCTF{XXXXX}
-* **Author:** Nakata Christian (n4ctbyte)
+* **Challenge Author:** SUSIE/PANDU
+* **Writeup Author:** Nakata Christian (n4ctbyte)
 * **Date:** December 31, 2025
 * **Source:** [Link to Challenge](https://play.picoctf.org/practice/challenge/129?category=4&difficulty=2&page=3)
 

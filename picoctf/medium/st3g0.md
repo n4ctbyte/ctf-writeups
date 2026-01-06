@@ -4,7 +4,8 @@
 * **Category:** Forensics, Steganography
 * **Difficulty:** Medium
 * **Hint:** We know the end sequence of the message will be $t3g0
-* **Author:** Nakata Christian (n4ctbyte)
+* **Challenge Author:** LT 'SYREAL' JONES ft DJROBIN17
+* **Writeup Author:** Nakata Christian (n4ctbyte)
 * **Date:** December 30, 2025
 * **Source:** [Link to Challenge](https://play.picoctf.org/practice/challenge/305?category=4&page=3)
 

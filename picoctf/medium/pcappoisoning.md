@@ -4,7 +4,8 @@
 * **Category:** Forensics, pcap
 * **Difficulty:** Medium
 * **Hint:** None
-* **Author:** Nakata Christian (n4ctbyte)
+* **Challenge Author:** MUBARAK MIKAIL
+* **Writeup Author:** Nakata Christian (n4ctbyte)
 * **Date:** January 6, 2026
 * **Source:** [Link to Challenge](https://play.picoctf.org/practice/challenge/362?category=4&difficulty=2&page=1)
 

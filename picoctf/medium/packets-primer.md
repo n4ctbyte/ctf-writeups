@@ -4,7 +4,8 @@
 * **Category:** Forensics, pcap
 * **Difficulty:** Medium
 * **Hint:** Wireshark, if you can install and use it, is probably the most beginner friendly packet analysis software product.
-* **Author:** Nakata Christian (n4ctbyte)
+* **Challenge Author:** LT 'SYREAL' JONES
+* **Writeup Author:** Nakata Christian (n4ctbyte)
 * **Date:** December 30, 2025
 * **Source:** [Link to Challenge](https://play.picoctf.org/practice/challenge/286?category=4&page=3)
 

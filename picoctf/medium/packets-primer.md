@@ -1,6 +1,6 @@
 # [Packets Primer]
 
-* **CTF Name:** picoCTF
+* **CTF Name:** picoCTF 2022
 * **Category:** Forensics, pcap
 * **Difficulty:** Medium
 * **Hint:** Wireshark, if you can install and use it, is probably the most beginner friendly packet analysis software product.

@@ -1,6 +1,6 @@
 # [Lookey here]
 
-* **CTF Name:** picoCTF
+* **CTF Name:** picoCTF 2022
 * **Category:** Forensics, grep
 * **Difficulty:** Medium
 * **Hint:** Download the file and search for the flag based on the known prefix.

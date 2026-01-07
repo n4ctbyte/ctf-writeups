@@ -1,6 +1,6 @@
 # [st3g0]
 
-* **CTF Name:** picoCTF
+* **CTF Name:** picoCTF 2022
 * **Category:** Forensics, Steganography
 * **Difficulty:** Medium
 * **Hint:** We know the end sequence of the message will be $t3g0

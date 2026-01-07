@@ -1,6 +1,6 @@
 # [PcapPoisoning]
 
-* **CTF Name:** picoCTF
+* **CTF Name:** picoCTF 2023
 * **Category:** Forensics, pcap
 * **Difficulty:** Medium
 * **Hint:** None

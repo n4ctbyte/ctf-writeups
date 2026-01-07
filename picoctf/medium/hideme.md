@@ -1,6 +1,6 @@
 # [hideme]
 
-* **CTF Name:** picoCTF
+* **CTF Name:** picoCTF 2023
 * **Category:** Forensics, Steganography
 * **Difficulty:** Medium
 * **Hint:** None

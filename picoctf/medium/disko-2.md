@@ -1,6 +1,6 @@
 # [Disko-2]
 
-* **CTF Name:** picoCTF
+* **CTF Name:** picoCTF (picoGym Exclusive)
 * **Category:** Forensics
 * **Difficulty:** Medium
 * **Hint:** How can you extract/isolate a partition?

@@ -24,7 +24,7 @@ To investigate a network capture file (`.pcap`) and recover a hidden flag by ide
 The investigation revealed that the flag was hidden within the UDP Source Ports of packets destined for Port 22. By subtracting an offset of 5000 from these port numbers and converting the result to ASCII, the flag was successfully retrieved: `picoCTF{p1LLf3r3d_data_v1a_st3g0}`.
 
 **Method:**
-: The process involved Initial String Analysis, Manual Stream Investigation, Protocol Filtering in Wireshark, and Custom Python Scripting using the `scapy` library.
+The process involved Initial String Analysis, Manual Stream Investigation, Protocol Filtering in Wireshark, and Custom Python Scripting using the `scapy` library.
 
 ---
 

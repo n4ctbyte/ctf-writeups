@@ -14,7 +14,7 @@
 
 ## Challenge Description
 
-![Shiunji Ouka Description](img/shiunji-ouka.png)
+![Shiunji Ouka Description](../img/shiunji-ouka.png)
 
 ## 1. Executive Summary
 
@@ -150,7 +150,7 @@ with open("recovered_flag.pdf", "wb") as f:
 
 I opened the `recovered_flag.pdf` and got the flag `INTECHFEST{easy_shellc0de_ransomw4re!_00ef83dbcc}`.
 
-![Flag Within the PDF](img/shiunji-ouka-flag.png)
+![Flag Within the PDF](../img/shiunji-ouka-flag.png)
 
 ---
 

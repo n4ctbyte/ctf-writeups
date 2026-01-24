@@ -1,13 +1,13 @@
 # [shark on wire 2]
 
-- **CTF Name:** picoCTF 2019
-- **Category:** Forensics
-- **Difficulty:** Medium
-- **Hint:** None
-- **Challenge Author:** DANNY
-- **Writeup Author:** Nakata Christian (n4ctbyte)
-- **Date:** January 12, 2026
-- **Source:** [Link to Challenge](https://play.picoctf.org/practice/challenge/84?category=4&difficulty=2&page=4)
+* **CTF Name:** picoCTF 2019
+* **Category:** Forensics
+* **Difficulty:** Medium
+* **Hint:** None
+* **Challenge Author:** DANNY
+* **Writeup Author:** Nakata Christian (n4ctbyte)
+* **Date:** January 12, 2026
+* **Source:** [Link to Challenge](https://play.picoctf.org/practice/challenge/84?category=4&difficulty=2&page=4)
 
 ---
 

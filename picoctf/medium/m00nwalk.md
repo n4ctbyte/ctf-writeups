@@ -1,15 +1,15 @@
 # [m00nwalk]
 
-- **CTF Name:** picoCTF 2019
-- **Category:** Forensics
-- **Difficulty:** Medium
-- **Hint:**
+* **CTF Name:** picoCTF 2019
+* **Category:** Forensics
+* **Difficulty:** Medium
+* **Hint:**
     * 1. How did pictures from the moon landing get sent back to Earth?
     * 2. What is the CMU mascot?, that might help select a RX option
-- **Challenge Author:** JOON
-- **Writeup Author:** Nakata Christian (n4ctbyte)
-- **Date:** January 12, 2026
-- **Source:** [Link to Challenge](https://play.picoctf.org/practice/challenge/26?category=4&difficulty=2&page=4)
+* **Challenge Author:** JOON
+* **Writeup Author:** Nakata Christian (n4ctbyte)
+* **Date:** January 12, 2026
+* **Source:** [Link to Challenge](https://play.picoctf.org/practice/challenge/26?category=4&difficulty=2&page=4)
 
 ---
 

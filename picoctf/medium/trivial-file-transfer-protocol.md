@@ -1,13 +1,13 @@
 # [Trivial File TRansfer Protocol]
 
-- **CTF Name:** picoCTF 2021
-- **Category:** Forensics
-- **Difficulty:** Medium
-- **Hint:** What are some other ways to hide data?
-- **Challenge Author:** DANNY
-- **Writeup Author:** Nakata Christian (n4ctbyte)
-- **Date:** January 13, 2026
-- **Source:** [Link to Challenge](https://play.picoctf.org/practice/challenge/103?category=4&difficulty=2&page=4)
+* **CTF Name:** picoCTF 2021
+* **Category:** Forensics
+* **Difficulty:** Medium
+* **Hint:** What are some other ways to hide data?
+* **Challenge Author:** DANNY
+* **Writeup Author:** Nakata Christian (n4ctbyte)
+* **Date:** January 13, 2026
+* **Source:** [Link to Challenge](https://play.picoctf.org/practice/challenge/103?category=4&difficulty=2&page=4)
 
 ---
 

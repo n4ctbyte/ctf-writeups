@@ -4,7 +4,7 @@
 * **Category:** Forensics, disk
 * **Difficulty:** Medium
 * **Hint:** None
-**Challenge Author:** LT 'SYREAL' JONES
+* **Challenge Author:** LT 'SYREAL' JONES
 * **Writeup Author:** Nakata Christian (n4ctbyte)
 * **Date:** January 7, 2026
 * **Source:** [Link to Challenge](https://play.picoctf.org/practice/challenge/284?category=4&difficulty=2&page=2)

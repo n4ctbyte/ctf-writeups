@@ -6,7 +6,7 @@
 * **Hint:**
     * 1. It may help to analyze this image in multiple ways: as a blob, and as an actual mounted disk.
     * 2. Have you heard of slack space? There is a certain set of tools that now come with Ubuntu that I'd recommend for examining that disk space phenomenon...
-**Challenge Author:** SYREAL
+* **Challenge Author:** SYREAL
 * **Writeup Author:** Nakata Christian (n4ctbyte)
 * **Date:** January 20, 2026
 * **Source:** [Link to Challenge](https://play.picoctf.org/practice/challenge/87?category=4&difficulty=2&page=4)

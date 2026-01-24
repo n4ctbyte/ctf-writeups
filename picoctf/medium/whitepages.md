@@ -1,13 +1,13 @@
 # [WhitePages]
 
-- **CTF Name:** picoCTF 2019
-- **Category:** Forensics
-- **Difficulty:** Medium
-- **Hint:** There is data encoded somewhere... there might be an online decoder.
-- **Challenge Author:** JOHN HAMMOND
-- **Writeup Author:** Nakata Christian (n4ctbyte)
-- **Date:** January 12, 2026
-- **Source:** [Link to Challenge](https://play.picoctf.org/practice/challenge/51?category=4&difficulty=2&page=4&search=)
+* **CTF Name:** picoCTF 2019
+* **Category:** Forensics
+* **Difficulty:** Medium
+* **Hint:** There is data encoded somewhere... there might be an online decoder.
+* **Challenge Author:** JOHN HAMMOND
+* **Writeup Author:** Nakata Christian (n4ctbyte)
+* **Date:** January 12, 2026
+* **Source:** [Link to Challenge](https://play.picoctf.org/practice/challenge/51?category=4&difficulty=2&page=4&search=)
 
 ---
 

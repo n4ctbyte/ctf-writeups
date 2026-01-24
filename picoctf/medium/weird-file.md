@@ -1,13 +1,13 @@
 # [Weird File]
 
-- **CTF Name:** picoCTF 2021
-- **Category:** Forensics
-- **Difficulty:** Medium
-- **Hint:** https://www.youtube.com/watch?v=Y7IJjnLGqTQ
-- **Challenge Author:** THELSHELL
-- **Writeup Author:** Nakata Christian (n4ctbyte)
-- **Date:** January 13, 2026
-- **Source:** [Link to Challenge](https://play.picoctf.org/practice/challenge/101?category=4&difficulty=2&page=4)
+* **CTF Name:** picoCTF 2021
+* **Category:** Forensics
+* **Difficulty:** Medium
+* **Hint:** https://www.youtube.com/watch?v=Y7IJjnLGqTQ
+* **Challenge Author:** THELSHELL
+* **Writeup Author:** Nakata Christian (n4ctbyte)
+* **Date:** January 13, 2026
+* **Source:** [Link to Challenge](https://play.picoctf.org/practice/challenge/101?category=4&difficulty=2&page=4)
 
 ---
 

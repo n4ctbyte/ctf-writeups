@@ -4,7 +4,7 @@
 * **Category:** Forensics
 * **Difficulty:** Medium
 * **Hint:** Hash cracking
-**Challenge Author:** VENAX
+* **Challenge Author:** VENAX
 * **Writeup Author:** Nakata Christian (n4ctbyte)
 * **Date:** January 20, 2026
 * **Source:** [Link to Challenge](https://play.picoctf.org/practice/challenge/453?category=4&difficulty=2&page=1)

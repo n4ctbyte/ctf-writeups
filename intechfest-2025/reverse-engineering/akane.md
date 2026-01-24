@@ -4,7 +4,7 @@
 * **Category:** Reverse Engineering
 * **Difficulty:** Unknown
 * **Hint:** Flag is in the environment variable
-**Challenge Author:** aimardcr
+* **Challenge Author:** aimardcr (Project Sekai)
 * **Writeup Author:** Nakata Christian (n4ctbyte)
 * **Date:** January 17, 2026
 * **Source:** [Link to Challenge](https://tcp.1pc.tf/games/10/challenges#228-Akane)

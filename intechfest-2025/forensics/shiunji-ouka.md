@@ -4,7 +4,7 @@
 * **Category:** Forensics
 * **Difficulty:** Unknown
 * **Hint:** None
-**Challenge Author:** keii (SNI Cybersecurity Team)
+* **Challenge Author:** keii (SNI Cybersecurity Team)
 * **Writeup Author:** Nakata Christian (n4ctbyte)
 * **Date:** January 6, 2026
 * **Source:** [Link to Challenge](https://tcp.1pc.tf/games/10/challenges#236-shiunji-ouka)

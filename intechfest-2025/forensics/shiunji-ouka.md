@@ -2,7 +2,7 @@
 
 * **CTF Name:** Intechfest 2025
 * **Category:** Forensics
-* **Difficulty:** Unknown
+* **Difficulty:** 1000 pts
 * **Hint:** None
 * **Challenge Author:** keii (SNI Cybersecurity Team)
 * **Writeup Author:** Nakata Christian (n4ctbyte)

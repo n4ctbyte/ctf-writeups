@@ -2,7 +2,7 @@
 
 * **CTF Name:** Vincoo CTF
 * **Category:** Cryptography
-* **Difficulty:** Unknown
+* **Difficulty:** 102 pts
 * **Hint:** None
 * **Challenge Author:** WanZKey
 * **Writeup Author:** Nakata Christian (n4ctbyte)

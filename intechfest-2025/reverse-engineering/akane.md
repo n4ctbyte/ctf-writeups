@@ -2,7 +2,7 @@
 
 * **CTF Name:** Intechfest 2025
 * **Category:** Reverse Engineering
-* **Difficulty:** Unknown
+* **Difficulty:** 593 pts
 * **Hint:** Flag is in the environment variable
 * **Challenge Author:** aimardcr (Project Sekai)
 * **Writeup Author:** Nakata Christian (n4ctbyte)

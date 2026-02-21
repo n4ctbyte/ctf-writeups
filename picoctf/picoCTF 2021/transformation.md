@@ -56,7 +56,7 @@ The provided Python snippet performs the following operations for every pair of 
 3. `chr(...)`: Converts the resulting 16-bit integer into a single Unicode character.
 
 **Mathematical Model:**
-$$Combined = (Bytehigh x 256) + Bytelow$$
+$$\text{Combined} = (\text{Byte}_{\text{high}} \times 256) + \text{Byte}_{\text{low}}$$
 
 ### Step 2: Designing the Decoder Logic
 

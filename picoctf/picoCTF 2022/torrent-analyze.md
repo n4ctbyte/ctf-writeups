@@ -4,10 +4,10 @@
 * **Category:** Forensics
 * **Difficulty:** Medium
 * **Hint:**
-    * 1. Download and open the file with a packet analyzer like Wireshark.
-    * 2. You may want to enable BitTorrent protocol (BT-DHT, etc.) on Wireshark. Analyze -> Enabled Protocols
-    * 3. Try to understand peers, leechers and seeds. 
-    * 4. The file name ends with .iso
+    * Download and open the file with a packet analyzer like Wireshark.
+    * You may want to enable BitTorrent protocol (BT-DHT, etc.) on Wireshark. Analyze -> Enabled Protocols
+    * Try to understand peers, leechers and seeds. 
+    * The file name ends with .iso
 * **Challenge Author:** MUBARAK MIKAIL
 * **Writeup Author:** Nakata Christian (n4ctbyte)
 * **Date:** January 24, 2026

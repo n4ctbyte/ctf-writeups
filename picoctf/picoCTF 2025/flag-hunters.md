@@ -4,9 +4,9 @@
 * **Category:** Reverse Engineering
 * **Difficulty:** Easy
 * **Hint:**
-    1. This program can easily get into undefined states. Don't be shy about Ctrl+C.
-    2. Unsanitized user input is always good, right?
-    3. Is there any syntax that is ripe for subversion?
+    * This program can easily get into undefined states. Don't be shy about Ctrl+C.
+    * Unsanitized user input is always good, right?
+    * Is there any syntax that is ripe for subversion?
 * **Challenge Author:** SYREAL
 * **Writeup Author:** Nakata Christian (n4ctbyte)
 * **Date:** February 16, 2026

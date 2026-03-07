@@ -4,8 +4,8 @@
 * **Category:** Forensics, pcap
 * **Difficulty:** Medium
 * **Hint:**
-    * 1: Download the pcap and look for the password or flag.
-    * 2: Don't try to use a password cracking tool, there are easier ways here.
+    * Download the pcap and look for the password or flag.
+    * Don't try to use a password cracking tool, there are easier ways here.
 * **Challenge Author:** MUBARAK MIKAIL
 * **Writeup Author:** Nakata Christian (n4ctbyte)
 * **Date:** January 6, 2026

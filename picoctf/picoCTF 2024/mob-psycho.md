@@ -4,8 +4,8 @@
 * **Category:** Forensics, browser_webshell_solvable, apk
 * **Difficulty:** Medium
 * **Hint:**
-    * 1. Did you know you can unzip APK files?
-    * 2. Now you have the whole host of shell tools for searching these files
+    * Did you know you can unzip APK files?
+    * Now you have the whole host of shell tools for searching these files
 * **Challenge Author:** NGIRIMANA SCHADRACK
 * **Writeup Author:** Nakata Christian (n4ctbyte)
 * **Date:** January 11, 2026

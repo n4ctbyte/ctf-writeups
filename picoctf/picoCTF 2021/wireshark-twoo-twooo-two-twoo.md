@@ -4,8 +4,8 @@
 * **Category:** Forensics
 * **Difficulty:** Medium
 * **Hint:**
-    * 1. Did you really find the flag?
-    * 2. Look for traffic that seems suspicious.
+    * Did you really find the flag?
+    * Look for traffic that seems suspicious.
 * **Challenge Author:** DYLAN
 * **Writeup Author:** Nakata Christian (n4ctbyte)
 * **Date:** January 9, 2026

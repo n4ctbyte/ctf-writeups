@@ -4,8 +4,8 @@
 * **Category:** Forensics
 * **Difficulty:** Medium
 * **Hint:**
-    * 1. It may help to analyze this image in multiple ways: as a blob, and as an actual mounted disk.
-    * 2. Have you heard of slack space? There is a certain set of tools that now come with Ubuntu that I'd recommend for examining that disk space phenomenon...
+    * It may help to analyze this image in multiple ways: as a blob, and as an actual mounted disk.
+    * Have you heard of slack space? There is a certain set of tools that now come with Ubuntu that I'd recommend for examining that disk space phenomenon...
 * **Challenge Author:** SYREAL
 * **Writeup Author:** Nakata Christian (n4ctbyte)
 * **Date:** January 20, 2026

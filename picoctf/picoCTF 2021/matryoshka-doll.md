@@ -4,8 +4,8 @@
 * **Category:** Forensics
 * **Difficulty:** Medium
 * **Hint:**
-    * 1: Wait, you can hide files inside files? But how do you find them?
-    * 2: Make sure to submit the flag as picoCTF{XXXXX}
+    * Wait, you can hide files inside files? But how do you find them?
+    * Make sure to submit the flag as picoCTF{XXXXX}
 * **Challenge Author:** SUSIE/PANDU
 * **Writeup Author:** Nakata Christian (n4ctbyte)
 * **Date:** December 31, 2025

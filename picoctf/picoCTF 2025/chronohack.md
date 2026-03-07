@@ -4,10 +4,10 @@
 * **Category:** Reverse Engineering
 * **Difficulty:** Medium
 * **Hint:**
-    1. https:///www.epochconverter.com/
-    2. https://learn.snyk.io/lesson/insecure-randomness/
-    3. Time tokens generation
-    4. Generate tokens for a range of seed values very close to the target time
+    * https:///www.epochconverter.com/
+    *  https://learn.snyk.io/lesson/insecure-randomness/
+    * Time tokens generation
+    * Generate tokens for a range of seed values very close to the target time
 * **Challenge Author:** BYAGUTANGAZA
 * **Writeup Author:** Nakata Christian (n4ctbyte)
 * **Date:** February 21, 2026

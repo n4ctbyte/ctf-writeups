@@ -23,6 +23,7 @@ The vulnerability was traced to the `edit()` function, which performs a fixed-si
 
 **Method:**
 The methodology involved static analysis of the C source code, manipulating heap layout via the provided binary operations (insert, delete, edit), and developing a Python exploit using pwntools that dynamically brute-forced the remote heap offset to execute the tcache poisoning.
+
 ---
 
 ## 2. Evidence Identification

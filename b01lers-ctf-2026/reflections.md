@@ -23,6 +23,7 @@ Exploited a logic flaw in `server.py` and the `calc1` compiler to inject a raw 3
 
 **Method:**
 The `calc1` compiler directly translates raw hex strings into executable bytes. By passing the hex dump of a custom ELF binary that reads and prints `/app/flag.txt`, the compiled binary ignores the server's math test and prints the flag to `stdout` instead. The grading script catches this as a "failed" math test and leaks our output to the terminal.
+
 ---
 
 ## 2. Evidence Identification

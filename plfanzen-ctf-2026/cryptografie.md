@@ -1,11 +1,11 @@
 # [cryptografie]
 
-* **CTF Name:** plfanzenctf 2026
-* **Category:** Cryptography
-* **Hint:** Okay okay... Because you asked so nicely here's the source code: [Source Code](https://github.com/openjdk/jdk/blob/2fe7ae94bc791992b2f2354fd98089ec6ebf1ad4/src/java.prefs/unix/classes/java/util/prefs/FileSystemPreferences.java#L793)
-* **Challenge Author:** Jorian
-* **Writeup Author:** Nakata Christian (n4ct)
-* **Date:** May 10, 2026
+- **CTF Name:** plfanzenctf 2026
+- **Category:** Cryptography
+- **Hint:** Okay okay... Because you asked so nicely here's the source code: [Source Code](https://github.com/openjdk/jdk/blob/2fe7ae94bc791992b2f2354fd98089ec6ebf1ad4/src/java.prefs/unix/classes/java/util/prefs/FileSystemPreferences.java#L793)
+- **Challenge Author:** Jorian
+- **Writeup Author:** Nakata Christian (n4ct)
+- **Date:** May 10, 2026
 
 ---
 
@@ -30,6 +30,7 @@ The approach involved reading the `FileSystemPreferences.java` source code to pi
 
 Target files provided by the organizers:
 
+- **Ciphertext:** ``_!(!!b!"m!'%!bg"6!'`!bg"7!(c!:w":!'w!|w"%!$!!^g!z!#w!|w!w!&)!|w"^!'g!:!"_!'w!~!"f!$%!|w"]!$@!_!"o!$:!`g"f!&:!;!"~!&8!_g!y!&}!cw"i!%:!@g"r!')!:g!5!(`!{g"[!$0!>@"9``
 - **Filename:** `FileSystemPreferences.java` (The internal Java library source code containing the custom encoding and decoding logic)
 
 ---
@@ -83,6 +84,7 @@ The `nodeName` function is exactly what we need. However, we can't just import t
 To bypass the `private` access modifier, I turned to Java Reflection. Reflection allows a running Java program to examine or modify the runtime behavior of applications, including accessing private fields and methods.
 
 I wrote a short script that:
+
 1. Loads the target class (`java.util.prefs.FileSystemPreferences`).
 2. Targets the specific method (`nodeName`).
 3. Forces it to be accessible via `setAccessible(true)`.
@@ -108,7 +110,7 @@ public class b {
         String encrypted = "_!(!!b!\"m!'%!bg\"6!'`!bg\"7!(c!:w\":!'w!|w\"%!$!!^g!z!#w!|w!w!&)!|w\"^!'g!:!\"_!'w!~!\"f!$%!|w\"]!$@!_!\"o!$:!`g\"f!&:!;!\"~!&8!_g!y!&}!cw\"i!%:!@g\"r!')!:g!5!(`!{g\"[!$0!>@\"9";
         Class<?> prefsClass = Class.forName("java.util.prefs.FileSystemPreferences");
         Method decodeMethod = prefsClass.getDeclaredMethod("nodeName", String.class);
-        decodeMethod.setAccessible(true); 
+        decodeMethod.setAccessible(true);
         String flag = (String) decodeMethod.invoke(null, encrypted);
         System.out.println(flag);
     }
@@ -118,7 +120,7 @@ public class b {
 **Compilation and Output:**
 
 ```bash
-─$ javac b.java                                             
+─$ javac b.java
 
 ─$ java --add-opens java.prefs/java.util.prefs=ALL-UNNAMED b
 plfanzen{w3Ll_D0N3,_0R_Sh0Uld_1_R4Th3R_S4Y_V2VsbCBkb29uZQ==}

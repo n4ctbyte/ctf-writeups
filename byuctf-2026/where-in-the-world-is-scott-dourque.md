@@ -4,7 +4,7 @@
 - **Category:** OSINT
 - **Hint:** None
 - **Challenge Author:** The Camel
-- **Writeup Author:** Nakata Christian (n4ct)
+- **Writeup Author:** Nakata Christian (n4ct) - TCP1P
 - **Date:** May 31, 2026
 
 ---

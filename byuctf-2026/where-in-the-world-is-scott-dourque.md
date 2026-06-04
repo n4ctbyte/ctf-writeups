@@ -44,7 +44,7 @@ Connecting all the clues we had:
 2. He flew to Austin on April 12 2026
 3. He only had "just long enough" time to visit the city
 
-We knew that he went to an Olive Garden in Austin, Texas, near the Austin-Bergstrom International Airport (because he mentioned only having a short amount of time). The question was, which one? There are multiple Olive Garden locations around that airport. Because of his time constraint, I deduced that he went to the one closest to the airport. I then checked the Google Maps reviews for that location and found the flag in a review left by Scott Dourque.
+We knew that he went to an Olive Garden in Austin, Texas, near the Austin-Bergstrom International Airport (because he mentioned only having a short amount of time). The question was, which one? There are multiple Olive Garden locations around that airport. Because of his time constraint, I deduced that he went to the one closest to the airport. I then checked the Google Maps reviews for that location, sorted them by newest, and found the flag in a review left by Scott Dourque.
 
 ![Scott Dourque's Review and Flag](img/scott-review.png)
 

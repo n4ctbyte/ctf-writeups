@@ -46,7 +46,7 @@ Verifying file type using signature headers (Magic Bytes).
 ```bash
 $ file encrypt.py   
 encrypt.py: Python script, ASCII text executable
-                                                                        $ file public.txt    
+$ file public.txt    
 public.txt: ASCII text, with very long lines (1398)
 ```
 

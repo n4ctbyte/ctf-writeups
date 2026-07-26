@@ -1,23 +1,23 @@
 # [Rogue Tower]
 
-* **CTF Name:** picoCTF 2026
-* **Category:** Forensics
-* **Difficulty:** 300 points
-* **Hint:**
-    * Look for unauthorized test network broadcasts on UDP port 55000
-    * Find the device that connected to the rogue tower by checking HTTP User-Agent headers
-    * The encryption key is derived from the victim device's IMSI
-    * The exfiltrated data is split across multiple HTTP POST requests
-* **Challenge Author:** SAMUEL DINESH
-* **Writeup Author:** Nakata Christian (n4ctbyte)
-* **Date:** March 13, 2026
-* **Source:** [Link to Challenge](https://play.picoctf.org/events/79/challenges/714?category=4&page=1)
+- **CTF Name:** picoCTF 2026
+- **Category:** Forensics
+- **Difficulty:** 300 points
+- **Hint:**
+  - Look for unauthorized test network broadcasts on UDP port 55000
+  - Find the device that connected to the rogue tower by checking HTTP User-Agent headers
+  - The encryption key is derived from the victim device's IMSI
+  - The exfiltrated data is split across multiple HTTP POST requests
+- **Challenge Author:** SAMUEL DINESH
+- **Writeup Author:** Nakata Christian (n4ctbyte)
+- **Date:** March 13, 2026
+- **Source:** [Link to Challenge](https://play.picoctf.org/events/79/challenges/714?category=4&page=1)
 
 ---
 
 ## Challenge Description
 
-![Rogue Tower Description](../img/rogue-tower.png)
+![Rogue Tower Description](img/rogue-tower.png)
 
 ## 1. Executive Summary
 
@@ -44,7 +44,7 @@ This section provides details regarding the initial evidence file.
 Verifying file type using signature headers (Magic Bytes).
 
 ```bash
-$ file rogue_tower.pcap   
+$ file rogue_tower.pcap
 rogue_tower.pcap: pcap capture file, microsecond ts (little-endian) - version 2.4 (Raw IPv4, capture length 65535)
 ```
 
@@ -71,6 +71,7 @@ $ tshark -r rogue_tower.pcap -Y 'http.request.method == "POST" && ip.dst == 198.
 45314543464e45416d
 ...
 ```
+
 Concatenating the hex strings and decoding them resulted in a Base64 string: `RlFXXnJldE1ECFNEAm5RBVpUa0UBRgFEaV4EBwlQUAUCRQ==`
 
 ### Step 4: Known Plaintext Attack (KPA)
@@ -87,6 +88,7 @@ This exactly matches the last 8 digits of the victim's IMSI (310410**868411126**
 Using the discovered 8-digit key, I wrote a Python script to decrypt the entire payload.
 
 **Solver Script:**
+
 ```python
 import base64
 
@@ -101,6 +103,7 @@ print(f"Flag: {decrypted}")
 ```
 
 **Terminal Output:**
+
 ```plaintext
 $ python3 solve.py
 Flag: picoCTF{r0gu3_c3ll_t0w3r_f068ab34}
@@ -111,6 +114,7 @@ Flag: picoCTF{r0gu3_c3ll_t0w3r_f068ab34}
 ## 4. Conclusion
 
 This challenge highlights two critical security concepts:
+
 1. Network Spoofing: The danger of Rogue Cell Towers (IMSI Catchers/Stingrays) intercepting mobile traffic by broadcasting stronger signals than legitimate towers.
 
 2. Weak Cryptography: Using predictable, static device identifiers (like a partial IMSI) combined with a simple XOR cipher makes the encryption trivial to break using a Known Plaintext Attack (KPA).

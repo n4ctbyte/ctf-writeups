@@ -1,21 +1,21 @@
 # [ClusterRSA]
 
-* **CTF Name:** picoCTF 2026
-* **Category:** Cryptography
-* **Difficulty:** 400 points
-* **Hint:** 
-    * RSA usually means two primes... but what if someone got greedy?
-    * Prime factors decomposition
-* **Challenge Author:** YAHAYA MEDDY
-* **Writeup Author:** Nakata Christian (n4ctbyte)
-* **Date:** March 15, 2026
-* **Source:** [Link to Challenge](https://play.picoctf.org/events/79/challenges/702?category=2&page=1)
+- **CTF Name:** picoCTF 2026
+- **Category:** Cryptography
+- **Difficulty:** 400 points
+- **Hint:**
+  - RSA usually means two primes... but what if someone got greedy?
+  - Prime factors decomposition
+- **Challenge Author:** YAHAYA MEDDY
+- **Writeup Author:** Nakata Christian (n4ctbyte)
+- **Date:** March 15, 2026
+- **Source:** [Link to Challenge](https://play.picoctf.org/events/79/challenges/702?category=2&page=1)
 
 ---
 
 ## Challenge Description
 
-![ClusterRSA Description](../img/clusterrsa.png)
+![ClusterRSA Description](img/clusterrsa.png)
 
 ## 1. Executive Summary
 
@@ -27,6 +27,7 @@ The investigation identified that the modulus n was a 332-bit number composed of
 
 **Method:**
 The methodology involved prime factorization via an online database (FactorDB) to save computational time, followed by a Python script to perform Multi-prime RSA decryption.
+
 ---
 
 ## 2. Evidence Identification
@@ -57,10 +58,10 @@ The hint "someone got greedy" suggested that the modulus n contains more than th
 
 Instead of performing local factorization using Pollard's Rho or ECM, which could be time-consuming for a 100-digit number, I queried FactorDB. The modulus was found to be composed of four distinct primes:
 
-* p1​ = 9671406556917033397931773
-* p2 ​= 9671406556917033398314601
-* p3​ = 9671406556917033398439721
-* p4​ = 9671406556917033398454847
+- p1​ = 9671406556917033397931773
+- p2 ​= 9671406556917033398314601
+- p3​ = 9671406556917033398439721
+- p4​ = 9671406556917033398454847
 
 ### Step 3: Calculating the Private Key
 
@@ -75,6 +76,7 @@ $$d \equiv e^{-1} \pmod{\phi(n)}$$
 I implemented the following Python script to automate the retrieval of factors and the final decryption.
 
 **Solver Script:**
+
 ```python
 from factordb.factordb import FactorDB
 from Crypto.Util.number import inverse, long_to_bytes
@@ -102,11 +104,13 @@ print(f"Flag: {long_to_bytes(m).decode()}")
 ```
 
 **Terminal Output:**
+
 ```bash
-$ python3 a.py                                      
+$ python3 a.py
 Factors: [9671406556917033397931773, 9671406556917033398314601, 9671406556917033398439721, 9671406556917033398454847]
 Flag: picoCTF{mul71_rsa_e89f8efb}
 ```
+
 ---
 
 ## 4. Conclusion

@@ -1,19 +1,19 @@
 # [Shared Secrets]
 
-* **CTF Name:** picoCTF 2026
-* **Category:** Cryptography
-* **Difficulty:** 100 points
-* **Hint:** What do you get if you combine a public key with a known private one?
-* **Challenge Author:** YAHAYA MEDDY
-* **Writeup Author:** Nakata Christian (n4ctbyte)
-* **Date:** March 16, 2026
-* **Source:** [Link to Challenge](https://play.picoctf.org/events/79/challenges/715?category=2&page=1)
+- **CTF Name:** picoCTF 2026
+- **Category:** Cryptography
+- **Difficulty:** 100 points
+- **Hint:** What do you get if you combine a public key with a known private one?
+- **Challenge Author:** YAHAYA MEDDY
+- **Writeup Author:** Nakata Christian (n4ctbyte)
+- **Date:** March 16, 2026
+- **Source:** [Link to Challenge](https://play.picoctf.org/events/79/challenges/715?category=2&page=1)
 
 ---
 
 ## Challenge Description
 
-![Shared Secrets Description](../img/shared-secrets.png)
+![Shared Secrets Description](img/shared-secrets.png)
 
 ## 1. Executive Summary
 
@@ -25,6 +25,7 @@ The investigation identified that the client's private secret (b) was inadverten
 
 **Method:**
 The methodology involved analyzing the provided Python source code to understand the key exchange mechanism, followed by a mathematical derivation to calculate the shared secret without needing the server's private key (a).
+
 ---
 
 ## 2. Evidence Identification
@@ -46,7 +47,7 @@ Verifying file type using signature headers (Magic Bytes).
 $ file encryption.py
 encryption.py: Python script, ASCII text executable
 
-$ file message.txt  
+$ file message.txt
 message.txt: ASCII text, with very long lines (320)
 ```
 
@@ -59,6 +60,7 @@ message.txt: ASCII text, with very long lines (320)
 First, I analyzed `encryption.py` to understand the encryption mechanism. The script implements a standard Diffie-Hellman Key Exchange (DHKE) and uses the resulting shared secret to XOR the flag.
 
 `encryption.py` **Code:**
+
 ```python
 from Crypto.Util.number import getPrime
 from random import randint
@@ -72,7 +74,7 @@ a = randint(2, p-2)
 A = pow(g, a, p)
 
 # Client secret
-b = '???'  
+b = '???'
 
 B = pow(g, b, p)
 
@@ -97,6 +99,7 @@ with open("file.txt", "w") as f:
 Upon inspecting the provided `message.txt`, I found all the necessary public parameters and, crucially, the leaked private value for b.
 
 `message.txt`:
+
 ```plaintext
 g = 2
 p = 1653798930689987750372209240014380521131540183716217687164747711336243702962818359267822691525697642105558753651223568056089606926425342081267821725904109431430327153613733358950243154522848602494020618427146508586350079988809469424456886589329449769221123659126892760967096413248127035734431548987006011015808526671
@@ -118,6 +121,7 @@ $$\text{Shared} \equiv (g^a)^b \pmod p \equiv g^{ab} \pmod p$$
 I implemented a Python script to calculate the shared secret and perform the XOR operation.
 
 **Solver Script:**
+
 ```python
 import binascii
 
@@ -139,6 +143,7 @@ print(f"Flag: {flag}")
 ```
 
 **Output:**
+
 ```bash
 $ python3 a.py
 Key: 191

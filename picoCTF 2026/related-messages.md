@@ -1,21 +1,21 @@
 # [Related Messages]
 
-* **CTF Name:** picoCTF 2026
-* **Category:** Cryptography
-* **Difficulty:** 200 points
-* **Hint:**
-    * How are the two messages related?
-    * Franklin Reiter _______ _______ attack.
-* **Challenge Author:** PHILIP THAYER
-* **Writeup Author:** Nakata Christian (n4ctbyte)
-* **Date:** March 16, 2026
-* **Source:** [Link to Challenge](https://play.picoctf.org/events/79/challenges/713?category=2&page=1)
+- **CTF Name:** picoCTF 2026
+- **Category:** Cryptography
+- **Difficulty:** 200 points
+- **Hint:**
+  - How are the two messages related?
+  - Franklin Reiter **\_\_\_** **\_\_\_** attack.
+- **Challenge Author:** PHILIP THAYER
+- **Writeup Author:** Nakata Christian (n4ctbyte)
+- **Date:** March 16, 2026
+- **Source:** [Link to Challenge](https://play.picoctf.org/events/79/challenges/713?category=2&page=1)
 
 ---
 
 ## Challenge Description
 
-![Related Messages Description](../img/related-messages.png)
+![Related Messages Description](img/related-messages.png)
 
 ## 1. Executive Summary
 
@@ -62,6 +62,7 @@ output.txt: ASCII text, with very long lines (617)
 Reviewing `chall.py` reveals that the same modulus N and exponent e were used to encrypt two different but related messages.
 
 **`chall.py` Source Code:**
+
 ```python
 from Crypto.Util.number import getPrime, inverse, bytes_to_long, long_to_bytes, GCD
 
@@ -87,6 +88,7 @@ print(N)
 The file `output.txt` contains the actual values for the two ciphertexts, the modulus N, and the crucial difference between the two plaintexts (k = −3).
 
 **`output.txt:**
+
 ```plaintext
 3486364849772584627692611749053367200656673358261596068549224442954489368512244047032432842601611650021333218776410522726164792063436874469202000304563253268152374424792827960027328885841727753251809392141585739745846369791063025294100126955644910200403110681150821499366083662061254649865214441429600114378725559898580136692467180690994656443588872905046189428367989340123522629103558929469463071363053880181844717260809141934586548192492448820075030490705363082025344843861901475648208157572346004443100461870519699021342998731173352225724445397168276113254405106732294978648428026500248591322675321980719576323749
 201982790559548563915678784397933493721879152787419243871599124287434576744055997870874349538398878336345269929647585648144070475012256331468688792105087899416655051702630953882466457932737483198442642588375981620937494661378586614008496182135571457352400128892078765628319466855732569272509655562943410536265866312968101366413636251672211633011159836642751480632253423529271185888171036917413867011031963618529122680143291205470937752671602494831117301480813590683791618751348224964277861127486155552153012612562009905595646626759034581358425916638671884927506025703373056113307665093346439014722219878575598308124
@@ -113,6 +115,7 @@ By calculating the Greatest Common Divisor (GCD) of f1​ and f2​, we can isol
 I developed a SageMath script to handle the polynomial arithmetic and GCD calculation.
 
 **Solver Script:**
+
 ```python
 from Crypto.Util.number import long_to_bytes
 

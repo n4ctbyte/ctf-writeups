@@ -1,20 +1,20 @@
 # [RPSLS]
 
-* **CTF Name:** Vincoo CTF
-* **Category:** Cryptography
-* **Difficulty:** 100 pts
-* **Hint:** [The Big Bang Theory - Rock Paper Scissors Lizard Spock](https://www.youtube.com/watch?v=pIpmITBocfM)
-* **Challenge Author:** KudaLiar
-* **Writeup Author:** Nakata Christian (n4ctbyte)
-* **Date:** February 1, 2026
-* **Source:** [Link to Challenge](https://tcp.1pc.tf/games/22/challenges#494-RPSLS)
-* **File Source:** [Link to File](https://tcp.1pc.tf/assets/56ddc2920d85487da32de4272d3fe2a2b8cf01e7fdfdc60054fa9ad1a36afbf5/s/CfDJ8PBiKR2NsZFKsICZj0IlmeQzEUvCnK2MLU5NGWrM-q9Depn4cS5X9N3ZHDaY7FblTAqX2CkPZ98PsMHAzvTR2-AIwLXrd2wq-vBahdYwSFYwtTwX5lrlunHupPEYGy3vXV7roy_Ow5BXTs6hVGGrCcNPHRsc6JhNLBNJLBYQdLHH7o_eVT7zRF__Jn60M0-ZWASHnDrr7v4sK0604bhrvhA_i89WkXNkWqc10d9LZ9eu1lNW6iUZP7_uBJ8BbbF8HcdR2LNr6LVzml-jMpIDu4E/rpsls_rpsls-dist.zip)
+- **CTF Name:** Vincoo CTF
+- **Category:** Cryptography
+- **Difficulty:** 100 pts
+- **Hint:** [The Big Bang Theory - Rock Paper Scissors Lizard Spock](https://www.youtube.com/watch?v=pIpmITBocfM)
+- **Challenge Author:** KudaLiar
+- **Writeup Author:** Nakata Christian (n4ctbyte)
+- **Date:** February 1, 2026
+- **Source:** [Link to Challenge](https://tcp.1pc.tf/games/22/challenges#494-RPSLS)
+- **File Source:** [Link to File](https://tcp.1pc.tf/assets/56ddc2920d85487da32de4272d3fe2a2b8cf01e7fdfdc60054fa9ad1a36afbf5/s/CfDJ8PBiKR2NsZFKsICZj0IlmeQzEUvCnK2MLU5NGWrM-q9Depn4cS5X9N3ZHDaY7FblTAqX2CkPZ98PsMHAzvTR2-AIwLXrd2wq-vBahdYwSFYwtTwX5lrlunHupPEYGy3vXV7roy_Ow5BXTs6hVGGrCcNPHRsc6JhNLBNJLBYQdLHH7o_eVT7zRF__Jn60M0-ZWASHnDrr7v4sK0604bhrvhA_i89WkXNkWqc10d9LZ9eu1lNW6iUZP7_uBJ8BbbF8HcdR2LNr6LVzml-jMpIDu4E/rpsls_rpsls-dist.zip)
 
 ---
 
 ## Challenge Description
 
-![RPSLS Description](../img/rpsls.png)
+![RPSLS Description](img/rpsls.png)
 
 ## 1. Executive Summary
 
@@ -41,7 +41,7 @@ This section provides details regarding the initial evidence file.
 Verifying file type using signature headers (Magic Bytes).
 
 ```bash
-$ file chall.py 
+$ file chall.py
 chall.py: Python script, ASCII text executable
 ```
 
@@ -54,6 +54,7 @@ chall.py: Python script, ASCII text executable
 The server utilizes a custom implementation of the Mersenne Twister. While the algorithm itself is robust, the critical vulnerability lies in the seeding method found in `chall.py`:
 
 **Full Code:**
+
 ```python
 #!/usr/bin/env python3
 import sys
@@ -151,9 +152,9 @@ def main():
             send(f"[Streak {streak}/{required_wins}] ")
 
         send("Input (0-4): ")
-        
+
         user_input = recv()
-        if user_input is None: return 
+        if user_input is None: return
 
         try:
             cm = int(user_input)
@@ -190,6 +191,7 @@ if __name__ == "__main__":
 ```
 
 **Vulnerable Code:**
+
 ```python
 # Custom Mersenne Twister Parameters
 MASK = 0xFFFFFFFF
@@ -200,7 +202,8 @@ M = 7
 seed = int.from_bytes(os.urandom(3), "big")
 seed_mt(seed)
 ```
-Using 3 bytes from `os.urandom` means there are only 2^24 or 16.777.216 possible seeds. This value is extremely low by modern security standards and can be brute-forced within minutes using a standard CPU. 
+
+Using 3 bytes from `os.urandom` means there are only 2^24 or 16.777.216 possible seeds. This value is extremely low by modern security standards and can be brute-forced within minutes using a standard CPU.
 
 ### Step 2: Collecting Trial Data
 
@@ -220,6 +223,7 @@ A Python script was created to replicate the `seed_mt` and `extract_number` logi
 Once the seed is identified locally, the generator is perfectly synchronized with the server's state. I developed a complete solver using `pwntools` to automate the data collection, the brute-force process, and the subsequent 200-round winning streak.
 
 **Solver:**
+
 ```python
 from pwn import *
 

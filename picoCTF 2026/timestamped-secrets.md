@@ -1,19 +1,19 @@
 # [Timestamped Secrets]
 
-* **CTF Name:** picoCTF 2026
-* **Category:** Cryptography
-* **Difficulty:** 200 points
-* **Hint:** encryption.py is a redacted example of the program
-* **Challenge Author:** YAHAYA MEDDY
-* **Writeup Author:** Nakata Christian (n4ctbyte)
-* **Date:** March 14, 2026
-* **Source:** [Link to Challenge](https://play.picoctf.org/events/79/challenges/722?category=2&page=1)
+- **CTF Name:** picoCTF 2026
+- **Category:** Cryptography
+- **Difficulty:** 200 points
+- **Hint:** encryption.py is a redacted example of the program
+- **Challenge Author:** YAHAYA MEDDY
+- **Writeup Author:** Nakata Christian (n4ctbyte)
+- **Date:** March 14, 2026
+- **Source:** [Link to Challenge](https://play.picoctf.org/events/79/challenges/722?category=2&page=1)
 
 ---
 
 ## Challenge Description
 
-![Timestamped Secrets Description](../img/timestamped-secrets.png)
+![Timestamped Secrets Description](img/timestamped-secrets.png)
 
 ## 1. Executive Summary
 
@@ -44,7 +44,7 @@ This section provides details regarding the initial evidence file.
 Verifying file type using signature headers (Magic Bytes).
 
 ```bash
-$ file message.txt  
+$ file message.txt
 message.txt: ASCII text
 
 $ file encryption.py
@@ -74,7 +74,7 @@ def encrypt(plaintext: str, timestamp: int) -> str:
     return ciphertext.hex()
 
 if __name__ == "__main__":
-  
+
     plaintext = "picoCTF{...}"
     result = encrypt(plaintext, key)
     print(f"Hint: The encryption was done around {timestamp} UTC\n")
@@ -101,7 +101,8 @@ Since the hint provides a specific timestamp, the search space for the key is ex
 I implemented a solver script to iterate through timestamps in a ±120 second range from the hint, generating the SHA-256 derived key for each and attempting AES-ECB decryption.
 
 **Solver Script:**
-```python                     
+
+```python
 from hashlib import sha256
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import unpad
@@ -132,6 +133,7 @@ print("\n[*] Done.")
 Running the script successfully recovered the key at the exact hint timestamp.
 
 **Terminal Output:**
+
 ```bash
 $ python3 a.py
 TIMESTAMP: 1770242615

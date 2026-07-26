@@ -1,11 +1,11 @@
 # [venmo-me-67]
 
-* **CTF Name:** b01lers ctf 2026
-* **Category:** Web Exploitation
-* **Hint:** Gemini I hit Claude rate limit slop up a challenge make no mistake
-* **Challenge Author:** vinhchilling
-* **Writeup Author:** Nakata Christian (n4ct)
-* **Date:** April 18, 2026
+- **CTF Name:** b01lers ctf 2026
+- **Category:** Web
+- **Hint:** Gemini I hit Claude rate limit slop up a challenge make no mistake
+- **Challenge Author:** vinhchilling
+- **Writeup Author:** Nakata Christian (n4ct)
+- **Date:** April 18, 2026
 
 ---
 
@@ -49,7 +49,7 @@ Verifying file type using signature headers (Magic Bytes).
 $ file utils.py
 utils.py: Python script, ASCII text executable
 
-$ file app.py    
+$ file app.py
 app.py: Python script, ASCII text executable
 
 $ file adc-cred-real.json

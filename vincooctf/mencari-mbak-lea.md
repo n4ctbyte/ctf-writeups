@@ -1,20 +1,20 @@
 # [Mencari Mbak LEA]
 
-* **CTF Name:** Vincoo CTF
-* **Category:** Cryptography
-* **Difficulty:** 102 pts
-* **Hint:** None
-* **Challenge Author:** WanZKey
-* **Writeup Author:** Nakata Christian (n4ctbyte)
-* **Date:** January 31, 2026
-* **Source:** [Link to Challenge](https://tcp.1pc.tf/games/22/challenges#497-Mencari-Mbak-LEA)
-* **File Source:** [Link to File](https://tcp.1pc.tf/assets/4fb8753715349fe3f777d286e50ed782a2e9c208b197c8f7ee39479a82219fd9/s/CfDJ8PBiKR2NsZFKsICZj0IlmeSQmVz_R4z-lCInG2gux2h90BKwEjnW4mpI87yl4FZ9OcsZgRzHJdxPeT68HzFxwpaelX87nKi7vps0HKIoOf-u2g5INSMLgcsho-ecqtPbW_TmJAQH368g5O1Yu1c7Qsliop_t4TM24xyUc1prStlJ0ZCgTDOs7Q_bX1XIFi3iamPK1fAmMA7D3rw-R9Cz-w2Kr112RDJISbfJLCiDnY7Xm-spSaIn3grzxW72AXjKCK_M4AWjFSbOjbSgbbwtVWk/mencarimbaklea_mencarimbaklea-dist.zip)
+- **CTF Name:** Vincoo CTF
+- **Category:** Cryptography
+- **Difficulty:** 102 pts
+- **Hint:** None
+- **Challenge Author:** WanZKey
+- **Writeup Author:** Nakata Christian (n4ctbyte)
+- **Date:** January 31, 2026
+- **Source:** [Link to Challenge](https://tcp.1pc.tf/games/22/challenges#497-Mencari-Mbak-LEA)
+- **File Source:** [Link to File](https://tcp.1pc.tf/assets/4fb8753715349fe3f777d286e50ed782a2e9c208b197c8f7ee39479a82219fd9/s/CfDJ8PBiKR2NsZFKsICZj0IlmeSQmVz_R4z-lCInG2gux2h90BKwEjnW4mpI87yl4FZ9OcsZgRzHJdxPeT68HzFxwpaelX87nKi7vps0HKIoOf-u2g5INSMLgcsho-ecqtPbW_TmJAQH368g5O1Yu1c7Qsliop_t4TM24xyUc1prStlJ0ZCgTDOs7Q_bX1XIFi3iamPK1fAmMA7D3rw-R9Cz-w2Kr112RDJISbfJLCiDnY7Xm-spSaIn3grzxW72AXjKCK_M4AWjFSbOjbSgbbwtVWk/mencarimbaklea_mencarimbaklea-dist.zip)
 
 ---
 
 ## Challenge Description
 
-![Mencari Mbak LEA Description](../img/mencari-mbak-lea.png)
+![Mencari Mbak LEA Description](img/mencari-mbak-lea.png)
 
 ## 1. Executive Summary
 
@@ -41,7 +41,7 @@ This section provides details regarding the initial evidence file.
 Verifying file type using signature headers (Magic Bytes).
 
 ```bash
-$ file server.py                                  
+$ file server.py
 server.py: Python script, ASCII text executable
 ```
 
@@ -54,6 +54,7 @@ server.py: Python script, ASCII text executable
 The server requires us to input `evil_text` and `evil_hash`. Since we know the length of the secret (16) and the output of the hash, we can calculate the padding used by the hash algorithm to fill the block. We can then append our own data (`"Bagi flagnya dong om..."`) and resume the hash calculation from the previous state. This is a textbook Length Extension Attack.
 
 **Full Code:**
+
 ```python
 #!/usr/bin/python3
 import os
@@ -77,10 +78,10 @@ def hash4(x: bytes):
 def challenge(hash):
     m = os.urandom(16)
     print(f"hash: {hash(m).hex()}")
-    sys.stdout.flush() 
-    
+    sys.stdout.flush()
+
     try:
-        evil_text = bytes.fromhex(input().strip()) 
+        evil_text = bytes.fromhex(input().strip())
         evil_hash = bytes.fromhex(input().strip())
     except:
         print("Format input harus hex string!")
@@ -96,7 +97,7 @@ def challenge(hash):
 
 def challenges():
     sys.stdout.reconfigure(line_buffering=True)
-    
+
     for h in [hash1, hash2, hash3, hash4]:
         if not challenge(h):
             print("Nub Banget lu Coy!")
@@ -108,17 +109,19 @@ if __name__ == "__main__":
 ```
 
 **Vulnerable Code Snippet:**
+
 ```python
 def challenge(hash):
     m = os.urandom(16)  # Secret length is fixed at 16 bytes
     print(f"hash: {hash(m).hex()}") # Leaks hash(secret)
     # ...
     # Checks if hash(secret + input) matches user provided hash
-    if hash(m + evil_text) != evil_hash: 
+    if hash(m + evil_text) != evil_hash:
         return False
 ```
 
 **Observation:**
+
 1. **Secret Length:** Known to be 16 bytes.
 2. **Original Data:** The server hashes `m` directly, implying the original data appended to the secret is empty (0 bytes).
 3. **Vulnerability:** The construction H(s) or H(s||m) allows an attacker to compute H(s||m||padding||new_data) given H(s||m) and the length of s||m.
@@ -128,6 +131,7 @@ def challenge(hash):
 I chose the `hashpumpy` library for the exploit. However, a significant hurdle was encountered. The library threw an error when the `original_data` argument was an empty string (`""` or `b""`), which was necessary since the server hashes the secret with no additional data.
 
 **Error Encountered:**
+
 ```plaintext
 [-] Terjadi kesalahan: original_data is empty
 ```
@@ -144,8 +148,9 @@ To bypass the library's restriction without rewriting the padding logic manually
 4. **Result:** The library generates the exact same padding as it would for the 16-byte secret. I then programmatically sliced off the dummy "A" from the output.
 
 **Code Implementation:**
+
 ```python
-fake_secret_len = 15 
+fake_secret_len = 15
 new_hash, new_data = hashpumpy.hashpump(original_hash, "A", payload, fake_secret_len)
 real_evil_data = new_data[1:]
 ```
@@ -161,6 +166,7 @@ However, discovery showed that the main function `hashpumpy.hashpump` automatica
 The final script iterated through the algorithms, applied the compensation trick, and successfully retrieved the flag.
 
 **Final Script:**
+
 ```python
 from pwn import *
 import hashpumpy
@@ -171,22 +177,22 @@ PORT = 32817
 def solve():
     try:
         io = remote(HOST, PORT)
-        
+
         algos = ['md5', 'sha1', 'sha256', 'sha512']
         payload = "Bagi flagnya dong om..."
-        
-        fake_secret_len = 15 
+
+        fake_secret_len = 15
 
         for algo in algos:
             print(f"[*] Menunggu soal {algo.upper()}...")
-            
+
             line = ""
             while "hash: " not in line:
                 line = io.recvline().decode().strip()
                 if "Eror" in line or "Wlekk" in line:
                     print(f"[-] Gagal di level sebelumnya: {line}")
                     return
-            
+
             original_hash = line.split("hash: ")[1].strip()
             print(f"[*] Level {algo.upper()} | Hash: {original_hash}")
 
@@ -196,9 +202,9 @@ def solve():
 
             io.sendline(real_evil_data.hex().encode())
             io.sendline(new_hash.encode())
-            
+
             print(f"[+] Jawaban {algo.upper()} terkirim! Lanjut...")
-                        
+
         print("\n" + "="*40)
         print(io.recvall(timeout=3).decode())
         print("="*40)
@@ -214,6 +220,7 @@ if __name__ == "__main__":
 ```
 
 **Terminal Output:**
+
 ```plaintext
 [+] Opening connection to gzcli.1pc.tf on port 32817: Done
 [*] Menunggu soal MD5...

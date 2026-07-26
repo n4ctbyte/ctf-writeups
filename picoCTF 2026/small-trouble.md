@@ -1,19 +1,19 @@
 # [Small Trouble]
 
-* **CTF Name:** picoCTF 2026
-* **Category:** Cryptography
-* **Difficulty:** 200 points
-* **Hint:** This might be a job for Boneh-Durfee
-* **Challenge Author:** YAHAYA MEDDY
-* **Writeup Author:** Nakata Christian (n4ctbyte)
-* **Date:** March 14, 2026
-* **Source:** [Link to Challenge](https://play.picoctf.org/events/79/challenges/718?category=2&page=1)
+- **CTF Name:** picoCTF 2026
+- **Category:** Cryptography
+- **Difficulty:** 200 points
+- **Hint:** This might be a job for Boneh-Durfee
+- **Challenge Author:** YAHAYA MEDDY
+- **Writeup Author:** Nakata Christian (n4ctbyte)
+- **Date:** March 14, 2026
+- **Source:** [Link to Challenge](https://play.picoctf.org/events/79/challenges/718?category=2&page=1)
 
 ---
 
 ## Challenge Description
 
-![Small Trouble Description](../img/small-trouble.png)
+![Small Trouble Description](img/small-trouble.png)
 
 ## 1. Executive Summary
 
@@ -110,6 +110,7 @@ However, mathematical analysis shows that for a 2096-bit N, the threshold for th
 I implemented a script using Continued Fractions to find the convergents of e/N, which eventually yields the private key d.
 
 **Solver Script:**
+
 ```python
 def get_cf(n, d):
     res = []
@@ -153,6 +154,7 @@ for k, d in conv:
 Running the script produced the flag immediately:
 
 **Terminal Output:**
+
 ```bash
 $ python3 a.py
 picoCTF{sm4ll_d_3d2584a9}

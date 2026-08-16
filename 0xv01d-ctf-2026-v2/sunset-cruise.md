@@ -2,7 +2,7 @@
 
 * **CTF Name:** 0xV01D CTF 2026 v2
 * **Category:** OSINT
-* **Difficulty:** 435 points
+* **Difficulty:** 415 points
 * **Writeup Author:** Nakata Christian (n4ct) - TCP1P
 * **Date:** August 16, 2026
 
@@ -24,7 +24,7 @@ We're given an image taken from a boat, showing a waterfront building along the 
 
 ### Step 2: Identifying the Building
 
-To identify the building in the image, I used Google Images and the result said the building is `Edip Efendi Yalısı` located on the Asian shore of the Bosphorus in Istanbul, Turkey.
+To identify the building, I cropped it from the image and searched it on Google Images. The results identified the building as `Edip Efendi Yalısı`, located on the Asian shore of the Bosphorus in Istanbul, Turkey.
 
 ![Sunset Cruise Google Images Result](img/sunset-cruise-google-image.png)
 

@@ -40,8 +40,12 @@ So we need to search a bit further. Since I don't really know about the inside o
 
 One of the results caught my attention which is "Weight Well" or "Drop Shaft". Searching for what is inside the weight well will gives our true answer which is `sand`.
 
+![Google Search Well Weight](img/the-north-star-metric-sand.png)
+
 ### Step 4: The Keeper in 1930
 
 Search directly for the full name of the keeper of Lyngvig Fyr in 1930 will give us "E. Haubirk" instead of the full name. So I searched "who is e. haubirk" and got his full name which is `Ejler Haubirk`.
+
+![Google Search Ejler Haubirk](img/the-north-star-metric-haubirk.png)
 
 Flag: `brunner{lyngvig_fyr,sand,ejler_haubirk}`

@@ -28,6 +28,8 @@ To identify the building in the image, I cropped the building and used Google Im
 
 ![Map Detective Google Images](img/map-detective-google-images.png)
 
+![Map Detective Visual Matches](img/map-detective-visual-matches.png)
+
 ### Step 3: Google Maps
 
 I moved to Google Maps to find the exact location and coordinates.

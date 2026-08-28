@@ -28,6 +28,8 @@ Using Google Lens on the lighthouse gives the name of the lighthouse which is `L
 
 ![Google Lens on the lighthouse](img/the-north-star-metric-lens.png)
 
+![Google Lens on the lighthouse](img/the-north-star-metric-visual-matches.png)
+
 ### Step 3: In the Tub
 
 If we search "what is in the tub of lyngvig lighthouse", the result will say "mercury bath" or "mercury float", but those aren't the true answer.
@@ -44,8 +46,10 @@ One of the results caught my attention which is "Weight Well" or "Drop Shaft". S
 
 ### Step 4: The Keeper in 1930
 
-Search directly for the full name of the keeper of Lyngvig Fyr in 1930 will give us "E. Haubirk" instead of the full name. So I searched "who is e. haubirk" and got his full name which is `Ejler Haubirk`.
+Search directly for the full name of the keeper of Lyngvig Fyr in 1930 will give us "E. Haubirk" instead of the full name. So I searched "who is e. haubirk" and got his full name which is `Ejler Haubirk`. Be careful, there are two men named Ejler Haubirk. You can go to `https://fyrtaarne.dk` to find archive of lighthouses in Denmark including the keepers' name.
 
 ![Google Search Ejler Haubirk](img/the-north-star-metric-haubirk.png)
+
+![Google Search Ejler Haubirk](img/the-north-star-metric-archive.png)
 
 Flag: `brunner{lyngvig_fyr,sand,ejler_haubirk}`

@@ -24,9 +24,11 @@ We're given an image taken from a boat, showing a waterfront building along the 
 
 ### Step 2: Identifying the Building
 
-To identify the building, I cropped it from the image and searched it on Google Images. The results identified the building as `Edip Efendi Yalısı`, located on the Asian shore of the Bosphorus in Istanbul, Turkey.
+To identify the building, I cropped it from the image and searched it on Google Lens. The results identified the building as `Edip Efendi Yalısı`, located on the Asian shore of the Bosphorus in Istanbul, Turkey.
 
 ![Sunset Cruise Google Images Result](img/sunset-cruise-google-image.png)
+
+![Sunset Cruise Google Images Result](img/sunset-cruise-visual-matches.png)
 
 Here is the verified location on Google Maps:
 

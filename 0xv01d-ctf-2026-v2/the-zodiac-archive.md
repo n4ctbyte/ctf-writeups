@@ -48,6 +48,8 @@ First, let's look at the stamp. `letter_1`, `letter_2`, and `letter_4` have an o
 
 ![US Bicentennial stamp](img/the-zodiac-archive-bicentennial-stamp.png)
 
+![US Bicentennial stamp release date](img/the-zodiac-archive-bicentennial-release-date.png)
+
 Combining the release year of the stamp and the series name:
 
 Flag: `0xV01D{1975_BICENTENNIAL}`

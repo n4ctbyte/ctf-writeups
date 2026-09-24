@@ -32,7 +32,7 @@ The Nelson Mandela box is a big clue. We can start by using Google Lens to find 
 
 ![Google Lens Result](img/my-car-google-lens.png)
 
-As we can see, there are a lot of `San Jose` and `San Fransisco` results. So we can assume that this place is in either `San Jose` or `San Fransisco`. From the same result, we can see 1 result that say `Folsom St` so this will be my starting point.
+As we can see, there are a lot of `San Jose` and `San Francisco` results. So we can assume that this place is in either `San Jose` or `San Francisco`. From the same result, we can see 1 result that say `Folsom St` so this will be my starting point.
 
 ### Step 3: Finding the Exact Location
 
@@ -48,7 +48,7 @@ In Google Maps, I searched for `Bayview Hunter's Point` and got this result.
 
 ![Bayview Hunter's Point](img/my-car-bayview-hunter-point.png)
 
-Checking around on `Revere Ave`, I found the exact location not far from the previous GMaps drop point. Pinpoint the location in the OpenStreetMap's map in the OSINT platform will give the flag.
+Checking around on `Revere Ave`, I found the exact location not far from the previous GMaps drop point. Pinpoint the location in the OpenStreetMap's map in the OSINT platform will give the flag. The coordinate is `37.7323532,-122.3913587`.
 
 ![The Exact Location](img/my-car-exact-location.png)
 

@@ -1,6 +1,6 @@
 # [Where in the World is Scott Dourque]
 
-- **CTF Name:** byuctf 2026
+- **CTF Name:** BYUCTF 2026
 - **Category:** OSINT
 - **Hint:** None
 - **Challenge Author:** The Camel

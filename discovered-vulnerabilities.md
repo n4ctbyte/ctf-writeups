@@ -1,1 +1,3 @@
-[**CVE-2026-13332**: Masteriyo LMS < 2.3.1 - Unauthenticated Arbitrary User Session Termination (Denial of Service)](https://wpscan.com/vulnerability/f987c823-f215-48f6-86fe-8d898f2c2d94/)
+[**CVE-2026-13332**: Masteriyo LMS < 2.3.1 - Unauthenticated Arbitrary User Session Termination (9.1 Critical)](https://nvd.nist.gov/vuln/detail/cve-2026-13332)
+
+[**CVE-2026-93779**: Tutor LMS <= 4.1.2 - Insecure Direct Object Reference to Authenticated (Subscriber+) Sensitive Information Exposure via REST API Endpoints (6.5 Medium)](https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/tutor/tutor-lms-412-insecure-direct-object-reference-to-authenticated-subscriber-sensitive-information-exposure-via-rest-api-endpoints)

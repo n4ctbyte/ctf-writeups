@@ -25,7 +25,7 @@ Let's continue from here.
 
 ### Step 2: Finding the Art
 
-The description said `on the wall next to where this photo was taken`. So I tried to look for the art using photos and videos uploaded by other people (there is no Street View around the gallery). And sadly, there were only 4 photos for this gallery. So I tried to see from another perspective. I looked at the photos and videos from the nearby ice cream store, `Cortile`. Scrolled a bit far and found nothing. When I was just about to give up and look for another way, I found something that I thought was the art.
+The description said `on the wall next to where this photo was taken`. So I tried to look for the art using photos and videos uploaded by other people (there is no Street View around the gallery). And sadly, there were only 4 photos for this gallery. So I tried to see from another perspective. I looked at the photos and videos from the nearby ice cream store, `Cortile`. Scrolled a bit far and found nothing. When I was just about to give up and look for another way, I found the art! Look at the pole on the right. That is the exact same pole as the one in the original photo.
 
 ![The Art](img/reverse-image-search-art.png)
 
